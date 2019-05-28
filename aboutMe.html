@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>About Me</title>
+	<link rel="stylesheet" href="style/cssAboutMe.css">
+	<script>alert("The Past, Present, and Future are buttons. Click them to open/close.")</script>
+</head>
+<body>
+	<h1><script>
+	var today = new Date();
+	var hourNow = today.getHours();
+	var greeting;
+
+	if (hourNow > 18) {
+	greeting = "Good Evening!";
+	} else if (hourNow > 12) {
+	greeting = "Good Afternoon!";
+	} else {
+	greeting = "Good Morning!"
+	}
+	document.write(greeting)
+	</script></h1>
+
+	<div>
+		<h2>My name is Michael Hofmann</h2>
+
+		<h3>On this page I'll be going a little into my past, what I'm currently doing, and what I hope for the future.</h3>
+
+		<h3>Where would you like to start?</h3>
+			<ul>
+				<div class="dropdown">
+					<li>
+						<button onclick="myFunctionPast()" class="dropbtn">Past</button>
+					</li>
+					<div id="myDropdownPast" class="dropdown-contentPast">
+						<p>I grew up in Ada, Michigan with my mom, dad, and two younger sisters. When in elementary school, my parents encouraged me to try new things and meet new people, so that meant lots of sports and clubs. Being more of an indoors kind of person, the clubs were usually my favorite, and while book club was fun, the science club felt more rewarding when we got to do experiments and see the results for ourselves. Since then, I knew that I wanted to build and create new things. I attended and graduated from <a href="https://www.fhps.net/high-schools/central/" target="_blank">Forest Hills Central Highschool</a> in 2016. 
+						</p>
+					</div>
+				</div>
+				<div class="dropdown">
+					<li>
+						<button onclick="myFunctionPresent()" class="dropbtn">Present</button>
+					</li>
+					<div id="myDropdownPresent" class="dropdown-contentPresent">
+						<p>I currently work at <a href="S=https://www.jetspizza.com/" target="_blank">Jet's Pizza</a> where I am both a manager and a delivery driver. To my suprise, I enjoy working there and the people I work with. Jet's has done a lot for me, such as helped me develop communication and team skills, but it's not my number one career choice and it's time to move on.
+						</p>
+					</div>
+				</div>
+				<div class="dropdown">
+					<li>
+						<button onclick="myFunctionFuture()" class="dropbtn">Future</button>
+					</li>
+					<div id="myDropdownFuture" class="dropdown-contentFuture">
+						<p>My hope for the future is to become proficient in multiple coding languages and develop a skillset as a software engineer that is desirable to employers. In the short term, I hope to attend a coding bootcamp which will set me on the right path to success and  not only teach me coding, but guide me on what comes next in terms of finding a job. Long term, I'd like to one day work for a company like Google, Apple, or Amazon, but I know that's a long way off and there's still a lot of knowledge and experience that I need. </p>
+					</div>
+				</div>
+			</ul>
+<script>
+function myFunctionPast() {
+  document.getElementById("myDropdownPast").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-contentPast");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+function myFunctionPresent() {
+  document.getElementById("myDropdownPresent").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-contentPresent");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+function myFunctionFuture() {
+  document.getElementById("myDropdownFuture").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-contentFuture");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+</body>
